@@ -1,0 +1,17 @@
+Setup react-native 0.61.5笔记：
+Issue：
+1：AndroidStudio打开项目时会报一个关于npx的error，找不到或没有文件或目录：
+    https://stackoverflow.com/questions/59511327/cannot-run-program-npx-error-2-no-such-file-or-directory-when-running-react
+    https://github.com/facebook/react-native/issues/26929
+    https://github.com/react-native-community/cli/issues/795
+    nvm会对npx命令有影响，卸载nvm之后安装nodejs最新版，目前v13.6.0
+    ubuntu安装nodejs：https://github.com/nodesource/distributions/blob/master/README.md#debinstall
+    (
+	# Using Ubuntu
+	curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+	sudo apt-get install -y nodejs
+
+	# Using Debian, as root
+	curl -sL https://deb.nodesource.com/setup_13.x | bash -
+	apt-get install -y nodejs
+    )
