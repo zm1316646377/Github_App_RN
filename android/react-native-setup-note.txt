@@ -15,3 +15,24 @@ Issue：
 	curl -sL https://deb.nodesource.com/setup_13.x | bash -
 	apt-get install -y nodejs
     )
+
+2: 执行npx react-native run-android命令，修改js文件后手机不能自动load最新的code
+    solutions：
+        1.执行npx react-native start命令启动js server
+        2. shake手机 Setting =》 Debugging =》Debug server host & port for device, 填写电脑的ip和metro server运行的端口
+           即可实现热更新
+        Doc: https://blog.csdn.net/qq_42184799/article/details/85263183
+
+---------------------------------------------------------------------
+react-navigation:
+    createStackNavigator: 移到了react-navigation-stack中，需要yarn add react-navigation-stack
+
+
+---------------------------------------------------------------------
+
+react-native 如何debug：
+    晃动手机，选择Debug
+    chrome浏览器会自动打开一个页面http://localhost:8081/debugger-ui/
+    同时按Ctrl + Shift + J
+    接下来debug和web debug基本一样
+
